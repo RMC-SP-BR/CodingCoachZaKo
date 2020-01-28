@@ -18,7 +18,7 @@ int main ()
       //setting the memory allotted to 0s 
       memset(array, 0, 60);
       
-      //tokening the input
+      //tokenizing the input
       char *p = strtok (str, delimiters );
       i = 0;
       while (p != NULL) //while it's not the end of the string...
