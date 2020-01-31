@@ -31,12 +31,12 @@ int main ()
       //looping input string looking for matches
       for ( i = 0; array[i]; ++i)
       {
-        int matches = 1;
+        int matches = 1; // matches start at one
         for (int j = 0; j < i; ++j)
         {
-          if (!strcmp(array[i], array[j]))
+          if (!strcmp(array[i], array[j])) //if match, 
           {
-            ++matches;
+            ++matches; // increase matches
           }
         }
         printf("%d instances of %s in original string\n", matches, array[i]);
