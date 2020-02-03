@@ -42,7 +42,10 @@ int main ()
         
         //TODO: print out ONLY the highest occurring match for each individual word in the array
         
-        printf("%d instances of %s in original string\n", matches, array[i]);
+        if (array[matches] < array[i]) //don't actually know why this kinda worked.  At this point I was just trying whatever to if it stuck...
+        {
+          printf("%d instances of %s in original string\n", matches, array[i]);
+        }
       }
 return 0;
 }
