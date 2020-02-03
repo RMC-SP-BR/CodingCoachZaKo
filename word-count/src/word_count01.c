@@ -34,11 +34,14 @@ int main ()
         int matches = 1; // matches start at one
         for (int j = 0; j < i; ++j)
         {
-          if (!strcmp(array[i], array[j])) //if match, 
+          if (!strcmp(array[i], array[j])) //if contents of borh arrays don't match, it's found another word, so ...
           {
             ++matches; // increase matches
           }
         }
+        
+        //TODO: print out ONLY the highest occurring match for each individual word in the array
+        
         printf("%d instances of %s in original string\n", matches, array[i]);
       }
 return 0;
