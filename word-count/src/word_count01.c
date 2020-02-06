@@ -10,6 +10,14 @@ int main ()
   int count = 0;
   int i;
 
+  typedef struct result   //result struct created to store repeated words and its occurrence
+  {
+   char text[80];      
+   int count;
+  } result_t;
+
+  result_t text[80];
+
       //lowercasing the input string
       for (int h = 0; str[h]; h++)
       {
@@ -39,13 +47,14 @@ int main ()
             ++matches; // increase matches
           }
         }
-        
         //TODO: print out ONLY the highest occurring match for each individual word in the array
         
-        if (array[matches] < array[i]) //don't actually know why this kinda worked.  At this point I was just trying whatever to if it stuck...
-        {
-          printf("%d instances of %s in original string\n", matches, array[i]);
-        }
+        strcpy(text->text, array[i]); //copying the matched word into result structure
+        text->count = matches;        //copying the word's occurrence into results structure
+        printf("result: %s\n", text->text); //print statement to validate expected results
+        printf("count: %d\n", matches);     //print statement to validate expected results
+        printf("%d instances of %s in original string\n", matches, array[i]);
+        
       }
 return 0;
 }
